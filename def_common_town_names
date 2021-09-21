@@ -1,0 +1,39 @@
+def common_town_names(list,target):
+    counter=0
+    while True:
+        pos=(list.casefold()).find(target.casefold())
+        if(pos==-1):
+            break
+        if(pos!=-1):
+            counter=(counter+1)
+            list=list[pos+1:]
+    return(counter)
+
+#These sort of work with some weird formatting issues
+
+english_txt=open("england_towns.txt")
+english_list=english_txt.readlines()
+print(english_list)
+
+#No line breaks between town names makes cutoff of new strings arbitrary
+
+ny_txt=open("ny_towns.txt")
+ny_list=ny_txt.readlines()
+
+
+
+ny_txt=open("ny_towns.txt")
+ny_list=ny_txt.readlines()
+
+def search_common_names(list,target):
+    counter=0
+    common_names=[]
+    for town in list:
+        if (town.casefold().find(target.casefold())!=-1):
+            town=town.strip()
+            common_names.append(town)
+            counter=counter+1
+    return common_names,counter
+
+
+search_common_names(ny_list,'bridge')
