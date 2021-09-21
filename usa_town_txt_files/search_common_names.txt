@@ -1,0 +1,150 @@
+from typing import Counter
+
+def get_town_list(txt): #For lists that are not organized into lines, like the England list
+    step_one=open(txt)
+    step_two=step_one.read()
+    finished_town_list=step_two.split() #Towns that are two words long like 'Mount Pleasant' break into two different strings.
+    return(finished_town_list)
+
+def get_usa_state_towns(txt): #For lists that are already in town-per-line like all USA lists
+    state_txt=open(txt)
+    state_list=state_txt.readlines()
+    return state_list
+
+alabama=['Alabama',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/alabama_towns.txt")]
+alaska=['Alaska',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/alaska_towns.txt")]
+arizona=['Arizona',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/arizona_towns.txt")]
+arkansas=['Arkansas',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/arkansas_towns.txt")]
+california=['California',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/california_towns.txt")]
+colorado=['Colorado',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/colorado_towns.txt")]
+connecticut=['Connecticut',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/connecticut_towns.txt")]
+delaware=['Delaware',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/delaware_towns.txt")]
+florida=['Florida',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/florida_towns.txt")]
+georgia=['Georgia',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/georgia_towns.txt")]
+hawaii=['Hawaii',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/hawaii_towns.txt")]
+idaho=['Idaho',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/idaho_towns.txt")]
+illinois=['Illinois',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/illinois_towns.txt")]
+indiana=['Indiana',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/indiana_towns.txt")]
+iowa=['Iowa',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/iowa_towns.txt")]
+kansas=['Kansas',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/kansas_towns.txt")]
+kentucky=['Kansas',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/kentucky_towns.txt")]
+louisiana=['Louisiana',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/louisiana_towns.txt")]
+maine=['Maine',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/maine_towns.txt")]
+maryland=['Maryland',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/maryland_towns.txt")]
+massachusetts=['Massachusetts',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/massachusetts_towns.txt")]
+michigan=['Michigan',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/michigan_towns.txt")]
+minnesota=['Minnesota',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/minnesota_towns.txt")]
+mississippi=['Mississippi',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/mississippi_towns.txt")]
+missouri=['Missouri',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/missouri_towns.txt")]
+montana=['Montana',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/montana_towns.txt")]
+nebraska=['Nebraska',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/nebraska_towns.txt")]
+nevada=['Nevada',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/nevada_towns.txt")]
+new_hampshire=['New Hampshire',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/new_hampshire_towns.txt")]
+new_jersey=['New Jersey',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/new_jersey_towns.txt")]
+new_mexico=['New Mexico',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/new_mexico_towns.txt")]
+north_carolina=['North Carolina',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/north_carolina_towns.txt")]
+north_dakota=['North Dakota',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/north_dakota_towns.txt")]
+new_york=['New York',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/ny_towns.txt")]
+ohio=['Ohio',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/ohio_towns.txt")]
+oklahoma=['Oklahoma',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/oklahoma_towns.txt")]
+oregon=['Oregon',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/oregon_towns.txt")]
+pennsylvania=['Pennsylvania',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/pennsylvania_towns.txt")]
+rhode_island=['Rhode Island',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/rhode_island_towns.txt")]
+south_carolina=['South Carolina',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/south_carolina_towns.txt")]
+south_dakota=['South Dakota',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/south_dakota_towns.txt")]
+tennessee=['Tennessee',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/tennessee_towns.txt")]
+texas=['Texas',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/texas_towns.txt")]
+utah=['Utah',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/utah_towns.txt")]
+vermont=['Vermont',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/vermont_towns.txt")]
+virginia=['Virginia',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/virginia_towns.txt")]
+washington=['Washington',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/washington_towns.txt")]
+west_virginia=['West Virginia',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/west_virginia_towns.txt")]
+wisconsin=['Wisconsin',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/wisconsin_towns.txt")]
+wyoming=['Wyoming',get_usa_state_towns("/Users/wschierenbeck/Desktop/Python Workspaces/Common Town Names/usa_town_txt_files/wyoming_towns.txt")]
+USA=['USA',[alabama,alaska,arizona,arkansas,california,colorado,connecticut,delaware,florida,georgia,hawaii,idaho,illinois,indiana,iowa,kansas,kentucky,louisiana,maine,maryland,massachusetts,michigan,minnesota,mississippi,missouri,montana,nebraska,nevada,new_hampshire,new_jersey,new_mexico,new_york,north_carolina,north_dakota,ohio,oklahoma,oregon,pennsylvania,rhode_island,south_carolina,south_dakota,tennessee,texas,utah,vermont,virginia,washington,west_virginia,wisconsin,wyoming]]
+
+#States are nested lists of ['State Name',['Town1','Town2','Town3']]
+#USA is a list containing these lists.
+
+
+def search_common_names(list,target): #Searches list for target, creates new list with all elements containg target + a counter
+    counter=0
+    common_names=[]
+    towns=list[1]
+    for town in towns:
+        if (town.casefold().find(target.casefold())!=-1):
+            town=town.strip()
+            common_names.append(town)
+            counter=counter+1
+    return common_names,counter
+
+search_common_names(new_york,'bridge')
+
+def compare_common_names(state1,state2,target): #Takes two states, one target, tells you which state has more
+    state1names,state1counter=search_common_names(state1,target)
+    state2names,state2counter=search_common_names(state2,target)
+    print(state1names)
+    print(str(state1counter)+' towns with ' + target + ' in the name in the state of ' + state1[0])
+    print(state2names)
+    print(str(state2counter)+' towns with ' + target + ' in the name in the state of ' + state2[0])
+    return state1counter,state2counter
+
+compare_common_names(alabama,alaska,'fort')
+
+def cut_off_state(town): #Removes the state suffix from the name of a given town. 'New York, NY' becomes 'New York'
+    cut_point=town.find(', ')
+    pure_town=town[:cut_point]
+    return pure_town
+
+cut_off_state('New York, NY')
+
+def mass_cut_states(state): #Removes the state suffixes from all towns in a given state. 'Brooklyn, NY' 'Queens, NY' become 'Brooklyn' 'Queens'
+    statedb=state[1]
+    newstatedb=[]
+    for towns in statedb:
+        towns=cut_off_state(towns)
+        newstatedb.append(towns)
+    return(newstatedb)
+
+jew_york=['Jew York',['Mount Pleasant, JY','Jew York, JY','Brooklyn, JY']]
+mass_cut_states(alabama)
+
+def find_shared_names(state1,state2): #Works in theory, but database problems make numbers not accurate
+    counter=0
+    sharednamesdb=[]
+    state1db=mass_cut_states(state1)
+    state2db=mass_cut_states(state2)
+    for towns in state1db:
+        if towns in state2db:
+            sharednamesdb.append(towns)
+            counter=counter+1
+    return(sharednamesdb,counter) 
+
+#The databases still include headers for each letter, '- A -' '- B -' which are matching strings in every comparison
+find_shared_names(new_york,new_jersey)
+
+
+# vvvvvvvv Does not work yet vvvvvvvvv
+
+def most_common_word(state): #Takes a state, and tells you the most common word in its town names, which will be Fort mostly one thinks
+    statedb=mass_cut_states(state)
+    standingdb=[]
+    newdb=[]
+    standingcounter=0
+    newcounter=0
+    for each_town in statedb:
+        search_terms=each_town.split()
+        for search_term in search_terms:
+            for each_town in statedb:
+                if each_town.find(search_term)!=-1:
+                    newdb.append(each_town)
+                    newcounter=newcounter+1
+            if newcounter>standingcounter:
+                standingdb=newdb
+                standingcounter=newcounter
+            newdb=[]
+            newcounter=0
+    return standingdb,standingcounter
+
+most_common_word(alabama)
+# ^^^^^^^^^^ 'AttributeError: 'list' object has no attribute 'split' ^^^^^^^
